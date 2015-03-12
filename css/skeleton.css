@@ -143,9 +143,9 @@ h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
 
 /* Larger than phablet */
 @media (min-width: 550px) {
-  h1 { font-size: 2.2rem; }
+  h1 { font-size: 2.8rem; }
   h2 { font-size: 2.2rem; }
-  h3 { font-size: 1.5rem; line-height: 1.6; }
+  h3 { font-size: 2.0rem; line-height: 1.6; }
   h4 { font-size: 1.0rem; }
   h5 { font-size: .4rem; }
   h6 { font-size: .5rem; }
@@ -156,7 +156,7 @@ p {
 
 h1 {
   color: #24B6A3;
-  padding-top: 12px;
+  padding-top: 20px;
   padding-bottom: 4px;
 }
 

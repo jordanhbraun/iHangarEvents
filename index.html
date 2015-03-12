@@ -50,11 +50,11 @@
                 start = moment(start);
                 end = moment(end);
              return ""
-                + start.format("MMM D") //date
+                + start.format("dddd, MMMM Do") //date
                 + " &nbsp; "
-                + start.format("h:mm") //start time
+                + start.format("h:mm a") //start time
                 + " - "
-                + end.format("h:mm")   //end time
+                + end.format("h:mm a")   //end time
           },
         });
       });
@@ -68,7 +68,7 @@
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
-      <img src="images/logo.jpg" style="display:block; margin-left:auto; margin-right:auto">
+      <img class="logo" src="images/logo.jpg">
   <div>
   <div class="container">
     <div class="row">

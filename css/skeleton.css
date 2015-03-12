@@ -421,3 +421,14 @@ there.
 
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {}
+
+
+/* Custom CSS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.logo {
+  display: block; 
+  margin-left: auto; 
+  margin-right: auto;
+  height: 200px;
+}

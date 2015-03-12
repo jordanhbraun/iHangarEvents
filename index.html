@@ -38,11 +38,24 @@
       _gCalFlow_debug = true;
     </script>
     <script type="text/javascript" src="jquery.gcal_flow.js"></script>
+    <script type="text/javascript" src="moment.js"></script>
     <script type="text/javascript">
       var $ = jQuery;
       $(function() {
         $('#gcf-simple').gCalFlow({
-          calid: 'ikmq9tlanqk2f0jclcbloju598@group.calendar.google.com'
+          calid: 'ikmq9tlanqk2f0jclcbloju598@group.calendar.google.com',
+
+            //format time range
+          daterange_formatter: function(start,end,allday) {
+                start = moment(start);
+                end = moment(end);
+             return ""
+                + start.format("MMM D") //date
+                + " &nbsp; "
+                + start.format("h:mm") //start time
+                + " - "
+                + end.format("h:mm")   //end time
+          },
         });
       });
     </script>
@@ -60,7 +73,33 @@
   <div class="container">
     <div class="row">
       <div class="twelve columns">
-    <div id="gcf-simple">  
+    <div id="gcf-simple">
+        <div class="gcf-header-block">
+          <div class="gcf-title-block">
+            <span class="gcf-title"></span>
+          </div>
+        </div>
+        <div class="gcf-item-container-block">
+          <div class="gcf-item-block">
+            <div class="gcf-item-header-block">
+              <div class="gcf-item-date-block">
+                <span class="gcf-item-daterange"></span>
+              </div>
+              <div class="gcf-item-title-block">
+                <strong class="gcf-item-title"></strong>
+              </div>
+            </div>
+            <div class="gcf-item-body-block">
+              <div class="gcf-item-description">
+              </div>
+              <div class="gcf-item-location">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="gcf-last-update-block">
+          LastUpdate: <span class="gcf-last-update"></span>
+        </div>
     </div>
       </div>
     </div>

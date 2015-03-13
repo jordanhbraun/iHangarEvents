@@ -41,6 +41,12 @@
     <script type="text/javascript" src="moment.js"></script>
     <script type="text/javascript" src="appworks.js"></script>
     <script type="text/javascript">
+        function refreshPage()
+          {
+            //Call browser refresh
+            location.reload();
+
+          }
       var $ = jQuery;
       $(function() {
         $('#gcf-simple').gCalFlow({
@@ -59,14 +65,6 @@
 
           },
         });
-
-        function refreshPage()
-        {
-          //Call browser refresh
-          location.reload();
-
-        }
-
         setInterval('refreshPage', 5000);
       });
 

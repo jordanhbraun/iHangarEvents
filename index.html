@@ -5,7 +5,7 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>Your page title here :)</title>
+  <title>iHangar Events</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -24,7 +24,7 @@
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="icon" type="image/png" href="logo.png">
 
   <!-- Calendar Stuff
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -56,25 +56,28 @@
                 + start.format("h:mm a") //start time
                 + " - "
                 + end.format("h:mm a")   //end time
+
           },
         });
+
+        AppWorks_Start();
+
+        function refreshPage()
+        {
+          //Call browser refresh
+          location.reload();
+
+        }
+
+        $(document).apwTimedAction({
+          'actionFunction' : 'refreshPage',
+          'trackingElement' : 'img.logo',
+          'timeInterval' : 30000,
+          'timerHandle' : 'refreshThread'
+      });
       });
 
-      AppWorks_Start();
 
-      function refreshPage()
-      {
-        //Call browser refresh
-        location.reload();
-
-      }
-
-      $(document).apwTimedAction({
-        'actionFunction' : 'refreshPage',
-        'trackingElement' : 'img.logo',
-        'timeInterval' : 30000,
-        'timerHandle' : 'refreshThread'
-      });
     </script>
 
 

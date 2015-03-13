@@ -39,6 +39,7 @@
     </script>
     <script type="text/javascript" src="jquery.gcal_flow.js"></script>
     <script type="text/javascript" src="moment.js"></script>
+    <script type="text/javascript" src="appworks.js"></script>
     <script type="text/javascript">
       var $ = jQuery;
       $(function() {
@@ -49,7 +50,6 @@
           daterange_formatter: function(start,end,allday) {
                 start = moment(start);
                 end = moment(end);
-                moment().zone(-7);
              return ""
                 + start.format("dddd, MMMM Do") //date
                 + " &nbsp; "
@@ -58,6 +58,22 @@
                 + end.format("h:mm a")   //end time
           },
         });
+      });
+
+      AppWorks_Start();
+
+      function refreshPage()
+      {
+        //Call browser refresh
+        location.reload();
+
+      }
+
+      $(document).apwTimedAction({
+        'actionFunction' : 'refreshPage',
+        'trackingElement' : 'img.logo',
+        'timeInterval' : 30000,
+        'timerHandle' : 'refreshThread'
       });
     </script>
 

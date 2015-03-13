@@ -60,8 +60,6 @@
           },
         });
 
-        AppWorks_Start();
-
         function refreshPage()
         {
           //Call browser refresh
@@ -69,12 +67,7 @@
 
         }
 
-        $(document).apwTimedAction({
-          'actionFunction' : 'refreshPage',
-          'trackingElement' : '#refresh',
-          'timeInterval' : 1000,
-          'timerHandle' : 'refreshThread'
-      });
+        setInterval('refreshPage', 5000);
       });
 
 

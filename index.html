@@ -41,12 +41,6 @@
     <script type="text/javascript" src="moment.js"></script>
     <script type="text/javascript" src="appworks.js"></script>
     <script type="text/javascript">
-        function refreshPage()
-          {
-            //Call browser refresh
-            location.reload();
-
-          }
       var $ = jQuery;
       $(function() {
         $('#gcf-simple').gCalFlow({
@@ -65,12 +59,42 @@
 
           },
         });
-        setInterval('refreshPage', 5000);
       });
-
-
     </script>
+    <script type="text/javascript">
 
+      function refreshContent()
+      {
+        $('#gcf-simple').gCalFlow({
+          calid: 'ikmq9tlanqk2f0jclcbloju598@group.calendar.google.com',
+
+            //format time range
+          daterange_formatter: function(start,end,allday) {
+                start = moment(start);
+                end = moment(end);
+             return ""
+                + start.format("dddd, MMMM Do") //date
+                + " &nbsp; "
+                + start.format("h:mm a") //start time
+                + " - "
+                + end.format("h:mm a")   //end time
+
+          },
+        });
+      }
+
+      $(document).ready({
+        AppWorks_Start();
+
+        $(document).apwTimedAction({
+          'actionFunction':'refreshContent',
+          'timeInterval': 5000,
+          'trackingElement':'#refresh',
+          'timerHandle':'refreshThread'
+        });
+
+      });
+    </script>
 
 
 </head>

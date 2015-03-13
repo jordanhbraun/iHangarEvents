@@ -49,6 +49,7 @@
           daterange_formatter: function(start,end,allday) {
                 start = moment(start);
                 end = moment(end);
+                moment().zone(-7);
              return ""
                 + start.format("dddd, MMMM Do") //date
                 + " &nbsp; "

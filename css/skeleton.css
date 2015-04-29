@@ -160,6 +160,13 @@ h1 {
   padding-bottom: 4px;
 }
 
+h1.title {
+  text-align: center;
+  font-size: 6em;
+  margin-bottom: 32px;
+  margin-top: 64px;
+}
+
 h3 {
   color: #666666;
 }
